@@ -12,5 +12,9 @@ public interface ProductService {
 
     List<Product> getAllProducts();
 
+    Product updateProduct(Integer id, Product product);
+
+    void deleteProduct(Integer id);
+
     boolean validateStock(Integer productId, Integer quantity);
 }
