@@ -1,12 +1,16 @@
 package com.example.productservice.service;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.productservice.entity.Product;
 
-@SpringBootApplication
-public class ProductService {
+import java.util.List;
 
-    public static void main(String[] args) {
-        SpringApplication.run(ProductService.class, args);
-    }
+public interface ProductService {
+
+    Product createProduct(Product product);
+
+    Product getProductById(Integer id);
+
+    List<Product> getAllProducts();
+
+    boolean validateStock(Integer productId, Integer quantity);
 }
