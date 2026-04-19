@@ -23,4 +23,6 @@ public interface ProductService {
     Page<Product> getProductsPaged(int page, int size, String sortBy);
 
     List<Product> getProductsAbovePrice(BigDecimal price);
+
+    List<Product> getProductsAbovePriceNative(BigDecimal price);
 }

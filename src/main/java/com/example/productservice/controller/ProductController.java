@@ -57,4 +57,9 @@ public class ProductController {
     public List<Product> getProductsAbovePrice(@RequestParam BigDecimal price) {
         return productService.getProductsAbovePrice(price);
     }
+
+    @GetMapping("/native/price")
+    public List<Product> getProductsAbovePriceNative(@RequestParam BigDecimal price) {
+        return productService.getProductsAbovePriceNative(price);
+    }
 }

@@ -75,4 +75,9 @@ public class ProductServiceImpl implements ProductService {
                 .filter(product -> product.getPrice().compareTo(price) > 0)
                 .toList();
     }
+
+    @Override
+    public List<Product> getProductsAbovePriceNative(BigDecimal price) {
+        return productRepository.findProductsAbovePriceNative(price);
+    }
 }
